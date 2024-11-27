@@ -808,7 +808,6 @@ master:
     - -c
     - |
       # Vérification que le cluster est complètement prêt
-      echo '{{ include "elasticsearch.service.name" . }}'
       until  response=$(curl -s http://'{{ include "elasticsearch.service.name" . }}':9200/_cluster/health?pretty) && echo "$response" | grep '"status" : "green"' ; do
         echo "Réponse d'Elasticsearch : $response"
         echo "Attente que le cluster Elasticsearch soit en état 'green'..."
