@@ -52,7 +52,7 @@ initScripts:
 *Noter que le nom du client S3 est arbitraire ici ("foobar"), vous pouver choisir ce que vous voulez, cependant il est recommandé d'utiliser le nom du clien S3 (Minio, AWS, GCP...).
 *
 
-Exemple d'une requete curl utilisant le client foobar :
+Maintenant on peut par exemple créer un repository de snapshot en utilisant le client foobar depuis le sidecar du cluster ou un job kubernetes:
 
 ```sh
 curl -X PUT "http://elasticsearch:9200/_snapshot/foobar_repository?pretty" -H 'Content-Type: application/json' -d'
